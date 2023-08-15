@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import DataStreamer, { ServerRespond } from './DataStreamer';
+import React, {Component} from 'react';
+import DataStreamer, {ServerRespond} from './DataStreamer';
 import Graph from './Graph';
 import './App.css';
+import {setInterval} from 'timers';
 
 /**
  * State declaration for <App />
@@ -48,7 +49,7 @@ class App extends Component<{}, IState> {
         // Previous data in the state and the new data from server
             this.setState({
             data: serverResponds,
-            showGraph: true,
+            showGraph: true
             });
          });
          x++;
